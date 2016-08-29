@@ -2,11 +2,14 @@
 
 Pytest plugin to treat skipped tests a test failure
 
+This is nice if you want to ensure that your CI tests really run all tests and
+don't skip tests because of missing dependencies.
+
+
 ## Usage
 
 Simply execute your tests via ``py.test --error-for-skips ...`` and all skipped
-tests become test failures. This is nice if you want to ensure that your CI
-tests really run all tests and don't skip tests because of missing dependencies.
+tests become test failures.
 
 
 ## Requirements
