@@ -1,6 +1,6 @@
 # Welcome to pytest-error-for-skips
 
-Pytest plugin to treat skipped tests a test failure
+Pytest plugin to treat skipped tests a test failures.
 
 This is nice if you want to ensure that your CI tests really run all tests and
 don't skip tests because of missing dependencies.
@@ -19,7 +19,8 @@ tests become test failures.
 
 ## Installation
 
-You can install `pytest-error-for-skips` via `pip` from PyPI:
+You can install `pytest-error-for-skips` via `pip` from
+[PyPI](https://pypi.org/project/pytest-error-for-skips/):
 
 ```sh
 pip install pytest-error-for-skips
