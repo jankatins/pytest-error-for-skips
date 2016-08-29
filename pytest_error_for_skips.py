@@ -2,20 +2,22 @@
 
 import pytest
 
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    outcome = yield
+    rep = outcome.get_result()
+
+    if pytest.config.getoption('--error-for-skips'):
+        if rep.skipped and call.excinfo.errisinstance(pytest.skip.Exception):
+            rep.outcome = 'failed'
+            r = call.excinfo._getreprcrash()
+            rep.longrepr = 'Forbidden skipped test - {message}'.format(message=r.message)
+
 
 def pytest_addoption(parser):
-    group = parser.getgroup('error-for-skips')
-    group.addoption(
-        '--foo',
-        action='store',
-        dest='dest_foo',
-        default='2016',
-        help='Set the value for the fixture "bar".'
+    parser.addoption(
+        '--error-for-skips',
+        action='store_true',
+        default=False,
+        help='Treat skipped tests as errors'
     )
-
-    parser.addini('HELLO', 'Dummy pytest.ini setting')
-
-
-@pytest.fixture
-def bar(request):
-    return request.config.option.dest_foo

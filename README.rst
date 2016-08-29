@@ -9,23 +9,25 @@ pytest-error-for-skips
     :target: https://ci.appveyor.com/project/janschulz/pytest-error-for-skips/branch/master
     :alt: See Build Status on AppVeyor
 
+.. image:: https://readthedocs.org/projects/pytest-plugin-to-treat-skipped-tests-as-errors/badge/?version=latest
+	:target: http://pytest-plugin-to-treat-skipped-tests-as-errors.readthedocs.io/en/latest/?badge=latest
+	:alt: Documentation Status
+
 Pytest plugin to treat skipped tests a test failure
 
-----
 
-This `Pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `Cookiecutter-pytest-plugin`_ template.
+Usage
+-----
 
-
-Features
---------
-
-* TODO
+Simply execute your tests via ``py.test --error-for-skips ...`` and all skipped
+tests become test failures. This is nice if you want to ensure that your CI
+tests really run all tests and don't skip tests because of missing dependencies.
 
 
 Requirements
 ------------
 
-* TODO
+* pytest
 
 
 Installation
@@ -36,11 +38,6 @@ You can install "pytest-error-for-skips" via `pip`_ from `PyPI`_::
     $ pip install pytest-error-for-skips
 
 
-Usage
------
-
-* TODO
-
 Contributing
 ------------
 Contributions are very welcome. Tests can be run with `tox`_, please ensure
@@ -49,13 +46,22 @@ the coverage at least stays the same before you submit a pull request.
 License
 -------
 
-Distributed under the terms of the `MIT`_ license, "pytest-error-for-skips" is free and open source software
+Distributed under the terms of the `MIT`_ license, "pytest-error-for-skips" is
+free and open source software
 
 
 Issues
 ------
 
-If you encounter any problems, please `file an issue`_ along with a detailed description.
+If you encounter any problems, please `file an issue`_ along with a detailed
+description.
+
+
+----
+
+This `Pytest`_ plugin was generated with `Cookiecutter`_ along with
+`@hackebrot`_'s `Cookiecutter-pytest-plugin`_ template.
+
 
 .. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
 .. _`@hackebrot`: https://github.com/hackebrot
