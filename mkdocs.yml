@@ -1,0 +1,10 @@
+site_name: pytest-error-for-skips
+site_description: Pytest plugin to treat skipped tests a test failure
+site_author: Jan Schulz
+
+theme: readthedocs
+
+repo_url: https://github.com/janschulz/pytest-error-for-skips
+
+pages:
+- Home: index.md
