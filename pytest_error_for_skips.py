@@ -7,7 +7,7 @@ def pytest_runtest_makereport(item, call):
     outcome = yield
     rep = outcome.get_result()
 
-    if pytest.config.getoption('--error-for-skips'):
+    if item.config.getoption('--error-for-skips'):
         if rep.skipped and call.excinfo.errisinstance(pytest.skip.Exception):
             rep.outcome = 'failed'
             r = call.excinfo._getreprcrash()
