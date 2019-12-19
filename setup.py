@@ -13,7 +13,7 @@ def read(fname):
 
 setup(
     name='pytest-error-for-skips',
-    version='2.0.1',
+    version='2.0.2',
     author='Jan Katins',
     author_email='jasc@gmx.net',
     maintainer='Jan Katins',
