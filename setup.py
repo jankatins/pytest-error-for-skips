@@ -22,6 +22,7 @@ setup(
     url='https://github.com/jankatins/pytest-error-for-skips',
     description='Pytest plugin to treat skipped tests a test failure',
     long_description=read('README.md'),
+    long_description_content_type='text/markdown',
     py_modules=['pytest_error_for_skips'],
     install_requires=['pytest>=5'],
     python_requires='>=3.5',
