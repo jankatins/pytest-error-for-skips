@@ -50,14 +50,14 @@ Contributions are very welcome. Tests can be run with `tox`_, please ensure
 the coverage at least stays the same before you submit a pull request.
 
 Simplest setup:
-```bash
-git clone https://github.com/jankatins/pytest-error-for-skips.git
-cd pytest-error-for-skips
-(mkdir env && cd env && python -m venv .)
-source env/bin/acticate
-python -m pip install -e .
-pytest
-```
+
+    $ git clone https://github.com/jankatins/pytest-error-for-skips.git
+	$ cd pytest-error-for-skips
+	$ (mkdir env && cd env && python -m venv .)
+	$ source env/bin/acticate
+	$ python -m pip install -e .
+	$ pytest
+
 
 License
 -------
