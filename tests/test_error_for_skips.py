@@ -20,7 +20,7 @@ def test_skipped_to_failure(testdir):
 
     # fnmatch_lines does an assertion internally
     result.stdout.fnmatch_lines([
-        '*::test_sth ERROR',
+        '*::test_sth ERROR*',
         'Forbidden skipped test - Skipped: dependencies not installed'
     ])
 
@@ -45,7 +45,7 @@ def test_skipped_still_works(testdir):
 
     # fnmatch_lines does an assertion internally
     result.stdout.fnmatch_lines([
-        '*::test_sth SKIPPED',
+        '*::test_sth SKIPPED*',
     ])
 
     # make sure that that we get a '0' exit code for the testsuite
