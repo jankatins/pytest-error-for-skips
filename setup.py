@@ -24,8 +24,8 @@ setup(
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
     py_modules=['pytest_error_for_skips'],
-    install_requires=['pytest>=5'],
-    python_requires='>=3.5',
+    install_requires=['pytest>=4.6'],
+    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Framework :: Pytest',
