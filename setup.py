@@ -23,7 +23,8 @@ setup(
     description='Pytest plugin to treat skipped tests a test failure',
     long_description=read('README.rst'),
     py_modules=['pytest_error_for_skips'],
-    install_requires=['pytest>=2.9.2'],
+    install_requires=['pytest>=5'],
+    python_requires='>=3.5',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Framework :: Pytest',
